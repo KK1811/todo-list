@@ -1,3 +1,10 @@
-<p>
-  addnote works!
-</p>
+<div class="">
+  <h4 class="text-center">Todo List</h4>
+</div>
+
+<form (ngSubmit)="addNote(addNoteForm)" #addNoteForm="ngForm">
+  <div class="form-group">
+    <input name="title" ngModel type="text" class="form-control" placeholder="Enter Title" required>
+  </div>
+  <button type="submit" [disabled]="!addNoteForm.valid" class="btn btn-primary btn-block">Add</button>
+</form>

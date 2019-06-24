@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AddNoteService } from 'src/app/service/add-note.service';
+import { NotesServiceService } from 'src/app/service/notes-service.service';
 
 @Component({
   selector: 'app-addnote',
@@ -9,7 +9,7 @@ import { AddNoteService } from 'src/app/service/add-note.service';
 })
 export class AddnoteComponent implements OnInit {
 
-  constructor(private notesService:AddNoteService) { }
+  constructor(private notesService:NotesServiceService) { }
 
   ngOnInit() {
   }

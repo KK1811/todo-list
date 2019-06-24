@@ -1,3 +1,9 @@
-<p>
-  login works!
-</p>
+<form (ngSubmit)="login(loginForm)" #loginForm="ngForm" class="form-signin">
+  <h1>Login</h1>
+  <input name="email" ngModel type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus="">
+  <br>
+  <input name="password" ngModel type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <br>
+  <button>Login</button>
+  Or <a routerLink="/auth/logup">Sign Up</a>
+</form>

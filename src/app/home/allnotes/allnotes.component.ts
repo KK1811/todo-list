@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetNotesService } from 'src/app/service/get-notes.service';
+import { NotesServiceService } from 'src/app/service/notes-service.service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { GetNotesService } from 'src/app/service/get-notes.service';
 })
 export class AllnotesComponent implements OnInit {
 
-  constructor(private notesService:GetNotesService) { }
+  constructor(private notesService:NotesServiceService) { }
 
   ngOnInit() {
     this.getNotes()
@@ -22,6 +22,10 @@ export class AllnotesComponent implements OnInit {
       this.notes=data
       console.log(this.notes)
     })
+  }
+
+  deleteNote(){
+    this.notesService.deleteNote()
   }
 
 }
